@@ -140,7 +140,7 @@ if __name__ == '__main__':
             agent.replay()
 
         if np.mean(time_values[-min(10, len(time_values)):]) > 490:
-                    agent.model.save_weights("cp_dueling_dqn.h5")
+                    agent.model.save_weights(".\weights\cp_dueling_dqn.h5")
                     print('Solved!')
                     break
 

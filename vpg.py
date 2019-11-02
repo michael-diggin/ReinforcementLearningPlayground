@@ -126,10 +126,10 @@ class PolicyAgent():
         return pol_loss, val_loss
 
     def save_weights(self):
-        self.policy_net.save_weights('/weights/cp_vpq_1.h5')
+        self.policy_net.save_weights('.\weights\cp_vpq_1.h5')
 
     def load_policy(self):
-        self.policy_net.load_weights('/weights/cp_vpq_1.h5')
+        self.policy_net.load_weights('.\weights\cp_vpq_1.h5')
 
 
 if __name__ == '__main__':

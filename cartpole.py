@@ -88,7 +88,6 @@ if __name__ == '__main__':
     obvs = env.observation_space.shape[0]
     actions = env.action_space.n 
     agent = RLAgent(obvs, actions)
-    agent.model.load_weights('cp_v0_weights_2.h5')
     time_values = []
     for episode in range(EPISODES):
         state = env.reset()
@@ -113,7 +112,7 @@ if __name__ == '__main__':
             print('Solved!')
             break
         if episode%50 == 0:
-            agent.model.save_weights('cp_v0_weights_2.h5')
+            agent.model.save_weights('.\weights\cp_v0_weights_2.h5')
     val = np.array(time_values)
     print(f'Mean:{np.mean(val)}, Std:{np.std(val)}, Max:{np.max(val)}, Min:{np.min(val)}')
 
